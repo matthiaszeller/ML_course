@@ -5,10 +5,10 @@ import numpy as np
 import costs
 
 
-def generate_w(num_intervals):
+def generate_w(num_intervals, low=(-100, -150), up=(200, 150)):
     """Generate a grid of values for w0 and w1."""
-    w0 = np.linspace(-100, 200, num_intervals)
-    w1 = np.linspace(-150, 150, num_intervals)
+    w0 = np.linspace(low[0], up[0], num_intervals)
+    w1 = np.linspace(low[1], up[1], num_intervals)
     return w0, w1
 
 
