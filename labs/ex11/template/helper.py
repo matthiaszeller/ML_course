@@ -4,6 +4,7 @@ import os
 import shutil
 import numpy as np
 from matplotlib.pyplot import imread
+from scipy.spatial import distance_matrix
 
 def load_data():
     """Load data and convert it to the metrics system."""
@@ -35,12 +36,9 @@ def load_image(path):
 
 def build_distance_matrix(data, mu):
     """build a distance matrix.
-
-    row of the matrix represents the data point,
-    column of the matrix represents the k-th cluster.
+    return
+        distance matrix:
+            row of the matrix represents the data point,
+            column of the matrix represents the k-th cluster.
     """
-    # ***************************************************
-    # INSERT YOUR CODE HERE
-    # TODO: build distance matrix
-    # ***************************************************
-    raise NotImplementedError
+    return distance_matrix(data, mu)
